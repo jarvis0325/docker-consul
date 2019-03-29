@@ -52,6 +52,7 @@ RUN test -e /etc/nsswitch.conf || echo 'hosts: files dns' > /etc/nsswitch.conf
 
 # Expose the consul data directory as a volume since there's mutable state in there.
 VOLUME /consul/data
+VOLUME /consul/config
 
 # Server RPC is used for communication between Consul clients and servers for internal
 # request forwarding.
